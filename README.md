@@ -14,6 +14,8 @@ I will briefly cover how "Type Hints" evolved over years. Following PEPs that ar
 2. [Literal Types ( PEP 586 )](https://peps.python.org/pep-0586) - Accepted
 3. [Adding a final qualifier to typing ( PEP 591 )](https://peps.python.org/pep-0591) - Accepted
 4. [TypedDict: Type Hints for Dictionaries with a Fixed Set of Keys ( PEP 589 )](https://peps.python.org/pep-0589) - Accepted
+## Python 3.9
+1. [Type Hinting Generics In Standard Collections ( PEP 585 )](https://peps.python.org/pep-0585/) - Final 
 ## Python 3.10
 1. [Allow writing union types as X | Y ( PEP 604 )](https://peps.python.org/pep-0604) - Accepted
 2. [Parameter Specification Variables ( PEP 612 )](https://peps.python.org/pep-0612) - Accepted

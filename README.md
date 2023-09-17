@@ -4,11 +4,13 @@ I will briefly cover how "Type Hints" evolved over years. Following PEPs that ar
 
 ## Python 3.0
 1. [Function Annotations ( PEP 3107)](https://peps.python.org/pep-3107) - Final
-## Python 3.5 & 3.6
+## Python 3.5, 3.6 & 3.7
 1. [Type Hints ( PEP 484)](https://peps.python.org/pep-0484) - Final 
 2. [Literature Overview for Type Hints ( PEP 482 )](https://peps.python.org/pep-0482) - Final & Informational
 3. [The Theory of Type Hints ( PEP 483 )](https://peps.python.org/pep-0483) - Final & Informational
 4. [Syntax for Variable Annotations ( PEP 526 )](https://peps.python.org/pep-0526) - Final
+5. [Core support for typing module and generic types ( PEP 560 )](https://peps.python.org/pep-0560) - Accepted
+6. [Postponed Evaluation of Annotations ( PEP 563 )](https://peps.python.org/pep-0563) - Accepted
 ## Python 3.8
 1. [Protocols: Structural subtyping (static duck typing) ( PEP 544 )](https://peps.python.org/pep-0544) - Accepted
 2. [Literal Types ( PEP 586 )](https://peps.python.org/pep-0586) - Accepted

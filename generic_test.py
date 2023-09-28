@@ -1,40 +1,26 @@
-from typing import Mapping, TypeVar
+from typing import Any,TypeVar,Generic
 
-class Employee:
-    def __init__(self,name):
-        self.name = name
+T = TypeVar("T")
 
-    def __repr__(self):
-        return f"Employee(name:{self.name})"
+class Record(Generic[T]):
+    id: int
+    value: T
+    def __init__(self,id:int,value:T):
+        self.id = id
+        self.value = value
 
-class Accountant(Employee): ...
-class TeamLead(Employee): ...
+    def get(self)-> T:
+        return self.value
 
 
-EmployeeType = TypeVar("EmployeeType",Employee,str) # Generic
+class Records:
+    def __init__(self,records: list[Record[T]]):
+        self.records = records
 
-def notify_by_email(employees: set[EmployeeType], overrides: Mapping[str, str]) -> list[EmployeeType]:
-    return list(employees)
+record1 : Record[str]  = Record(10,"Ten")
+record2 : Record[float]  = Record(5,"Five")
 
-employee_1 = Employee("Emp1")
-employee_2 = Employee("Emp2")
-employee_3 = Employee("Emp3")
-
-# output = notify_by_email({employee_1,employee_2},{"test":"test"})
-# print(output)
-
-# output = notify_by_email({"employee_1","employee_2"},{"test":"test"})
-# print(output)
-
-# output1 = notify_by_email({employee_1,"employee_2"},{"test":"test"})
-# print(output1)
-
-#output1 = notify_by_email({10,20,30},{"test":"test"})
-#print(output1)
-
-employee_4 = Accountant("Emp4")
-employee_5 = Accountant("Emp5")
-employee_6 = TeamLead("Emp6")
-
-output2 = notify_by_email({employee_4,employee_5,employee_6},{"test":"test"})
-print(output2)
+records = [
+    record1,
+    record2
+]

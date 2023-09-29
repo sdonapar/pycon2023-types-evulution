@@ -1,8 +1,11 @@
-from typing import Final
+from typing import TypedDict
 
-class ImmutablePoint:
-    x: Final[int]
-    y: Final[int]  # Error: final attribute without an initializer
+conference = {'name': "Pycon India", 'year': 2023, 'location': 'Hyderabad'}
 
-    def __init__(self) -> None:
-        self.x = 1  # Good
+class Conference(TypedDict, total=True): # By default total=True
+    name: str
+    year: int
+    location: str
+
+pycon_india: Conference = {'name': "Pycon India", 'year': 2023, 'location': 'Hyderabad'}
+pycon_india_workshop: Conference = {'name': "Pycon India Workshop", 'year': 2023}
